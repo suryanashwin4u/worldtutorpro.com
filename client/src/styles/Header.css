@@ -1,0 +1,14 @@
+/* src/styles/Header.css */
+.navbar-orange {
+  background-color: orange;
+  color: black;
+}
+.nav-brand{
+    font-weight: bold;
+    color: black;
+    ;
+}
+.nav-button {
+    margin: 5px;
+    color:black;
+  }
