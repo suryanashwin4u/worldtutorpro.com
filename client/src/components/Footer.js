@@ -1,42 +1,36 @@
 // src/Footer.js
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import facebookIcon from '../images/facebook-icon.svg'; // Assuming you have a Facebook icon image
+import gmailIcon from '../images/gmail-icon.svg';
+import linkedinIcon from '../images/linkedin-icon.svg'; // Assuming you have a LinkedIn icon image
+import phoneIcon from '../images/phone-icon.svg';
+import whatsappIcon from '../images/whatsapp-icon.svg';
 import '../styles/Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer-bg text-black p-3 text-left">
-      <Container>
-        <Row>
-          <Col md="4">
-            <h5>About Us</h5>
-            <p>
-            IndiaTutorPro.Com is an online education portal that helps in connecting a student seeking home tutor and the teacher searching for a home tuition job. We are a growing family of almost 76000+ tutors and students who are happily enjoying the art of learning from a personalized tutor.
-            </p>
-          </Col>
-          <Col md="4">
-            <h5>Links</h5>
-            <ul className="list-unstyled">
-              <li><a href="/">Home</a></li>
-              <li><a href="/tutor-registration">Tutor Registration</a></li>
-              <li><a href="/student-registration">Student Registration</a></li>
-            </ul>
-          </Col>
-          <Col md="4">
-            <h5>Contact Us</h5>
-            <p><b>Email:</b> SuryanAshwin4u@Gmail.Com </p>
-            <p><b>Phone/WhatsApp:</b> +91-8076452716 </p>
-          </Col>
-        </Row>
-        <Row>
-          <Col md="12">
-            <p className="text-center mt-4">
-            <b>&copy; {new Date().getFullYear()} IndiaTutorPro.Com All Rights Reserved.</b>        
-            </p>
-          </Col>
-        </Row>
-      </Container>
-    </footer>
+    <footer className="footer-bg text-black p-3 text-left d-flex justify-content-between align-items-center fixed-bottom">
+      <div className=''>
+        <strong>&copy; {new Date().getFullYear()} IndiaTutorPro.Com</strong> All Rights Reserved.
+      </div>
+      <div className='d-flex'>
+        <a href="tel:+918076452716" className="phone-link" title='+91-8076452716'>
+          <img src={phoneIcon} alt="Phone" className="phone-icon" /> 
+        </a>
+        <a href="mailto:suryanashwin4u@gmail.com" className="email-link" title='suryanashwin4u@gmail.com'>
+          <img src={gmailIcon} alt="Gmail" className="contact-icon" />
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=8076452716" target="_blank" rel="noopener noreferrer" className="whatsapp-link" title='+91-8076452716, +91-8285057682'>
+          <img src={whatsappIcon} alt="WhatsApp" className="whatsapp-icon" /> 
+        </a>
+        <a href="https://www.linkedin.com/in/suryanashwin4u/" target="_blank" rel="noopener noreferrer" className="linkedin-link" title='www.linkedin.com/in/suryanashwin4u/'>
+          <img src={linkedinIcon} alt="LinkedIn" className="linkedin-icon" /> 
+        </a>
+        <a href="https://www.facebook.com/ashwani.upsc.psc" target="_blank" rel="noopener noreferrer" className="facebook-link" title='www.facebook.com/ashwani.upsc.psc'>
+          <img src={facebookIcon} alt="Facebook" className="facebook-icon" /> 
+        </a>
+      </div>
+    </footer>  
   );
 };
 

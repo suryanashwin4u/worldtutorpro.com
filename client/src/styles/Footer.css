@@ -17,4 +17,8 @@ footer {
   .footer-bg{
     background-color: #FFA500;
   }
+
+  .phone-link, .email-link, .whatsapp-link, .linkedin-link, .facebook-link{
+    margin-right: 30px;
+  }
   

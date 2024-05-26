@@ -5,7 +5,7 @@ import '../styles/Header.css';
 
 const Header = () => {
   return (
-    <Navbar className="navbar-orange" variant="dark">
+    <Navbar className="navbar-orange" variant="dark" fixed="top">
       <Container>
         <Navbar.Brand href="/" className='nav-brand'>IndiaTutorPro.Com</Navbar.Brand>
         <Nav className="me-auto">
@@ -14,6 +14,12 @@ const Header = () => {
           </Button>
           <Button variant="outline-light" href="/student-registration" className="nav-button">
             Students Registration Form
+          </Button>
+          <Button variant="outline-light" href="/tutors-list" className="nav-button">
+            Tutors List
+          </Button>
+          <Button variant="outline-light" href="/students-list" className="nav-button">
+            Students List
           </Button>
         </Nav>
       </Container>

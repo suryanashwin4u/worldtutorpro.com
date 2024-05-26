@@ -1,14 +1,26 @@
+// src/components/StudnetRegistrationForm.js
 import React, { useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Col, Form, Row } from 'react-bootstrap';
+import 'react-datepicker/dist/react-datepicker.css';
 import '../styles/StudentRegistrationForm.css';
 
 const StudentRegistrationForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    grade: '',
+    parentName: '',
+    studentName: '',
+    studentGender: '',
+    phoneNumber: '',
+    whatsappNumber: '',
+    emailAddress: '',
+    address: '',
+    city: '',
+    state: '',
+    tutorGenderPreference: '',
+    classesList: [],
+    subjectsList: [],
   });
+
+  const [currentStep, setCurrentStep] = useState(1);
 
   const handleChange = (e) => {
     setFormData({
@@ -23,51 +35,177 @@ const StudentRegistrationForm = () => {
     console.log(formData);
   };
 
+  const handleClear = () => {
+    setFormData({      
+      parentName: '',
+      studentName: '',
+      studentGender: '',
+      phoneNumber: '',
+      whatsappNumber: '',
+      emailAddress: '',
+      address: '',
+      city: '',
+      state: '',
+      tutorGenderPreference: '',
+      classesList: [],
+      subjectsList: [],
+    });
+    setCurrentStep(1);
+  };
+
+  const nextStep = () => {
+    setCurrentStep(currentStep + 1);
+  };
+
+  const prevStep = () => {
+    setCurrentStep(currentStep - 1);
+  };
+
   return (
     <Form onSubmit={handleSubmit} className="student-registration-form">
-      <Form.Group controlId="formName">
-        <Form.Label>Name</Form.Label>
+      {currentStep === 1 && (
+        <>
+        <Form.Group controlId="formStudentName">
+          <Form.Control
+            type="text"
+            name="studentName"
+            value={formData.studentName}
+            onChange={handleChange}
+            placeholder="Enter student's name"
+          />
+        </Form.Group>
+        <Form.Group controlId="formStudentGender">
+          <Form.Control
+            as="select"
+            name="studentGender"
+            value={formData.studentGender}
+            onChange={handleChange}
+          >
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </Form.Control>
+        </Form.Group>
+        </>
+      )}
+
+      {currentStep === 2 && (
+        <>
+        <Form.Group controlId="formPhoneNumber">
+          <Form.Control
+            type="text"
+            name="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handleChange}
+            placeholder="Enter phone number"
+          />
+        </Form.Group>
+        <Form.Group controlId="formWhatsappNumber">
+          <Form.Control
+            type="text"
+            name="whatsappNumber"
+            value={formData.whatsappNumber}
+            onChange={handleChange}
+            placeholder="Enter WhatsApp number"
+          />
+        </Form.Group>
+        </>
+      )}
+
+      {currentStep === 3 && (
+        <>
+        <Form.Group controlId="formAddress">
+          <Form.Control
+            type="text"
+            name="address"
+            value={formData.address}
+            onChange={handleChange}
+            placeholder="Enter address"
+          />
+        </Form.Group>
+        <Form.Group controlId="formCity">
+          <Form.Control
+            type="text"
+            name="city"
+            value={formData.city}
+            onChange={handleChange}
+            placeholder="Enter city"
+          />
+        </Form.Group>
+        <Form.Group controlId="formState">
+          <Form.Control
+            type="text"
+            name="state"
+            value={formData.state}
+            onChange={handleChange}
+            placeholder="Enter state"
+          />
+        </Form.Group>
+        </>
+      )}
+
+      {currentStep === 4 && (
+        <>
+        <Form.Group controlId="formTutorGenderPreference">
         <Form.Control
-          type="text"
-          name="name"
-          value={formData.name}
+          as="select"
+          name="tutorGenderPreference"
+          value={formData.tutorGenderPreference}
           onChange={handleChange}
-          placeholder="Enter your name"
-        />
+        >
+          <option value="">Select</option>
+          <option value="male">Male Tutor</option>
+          <option value="female">Female Tutor</option>
+        </Form.Control>
       </Form.Group>
-      <Form.Group controlId="formEmail">
-        <Form.Label>Email address</Form.Label>
+      <Form.Group controlId="formClassesList">
         <Form.Control
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Enter your email"
-        />
+            as="select"
+            name="classesList"
+            value={formData.classesList}
+            onChange={handleChange}
+          >
+          <option value="">Select Classes</option>
+          <option value="">class 6th</option>
+        </Form.Control>
       </Form.Group>
-      <Form.Group controlId="formPassword">
-        <Form.Label>Password</Form.Label>
+      <Form.Group controlId="formSubjectsList">
         <Form.Control
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          placeholder="Enter your password"
-        />
+            as="select"
+            name="subjectsList"
+            value={formData.subjectsList}
+            onChange={handleChange}
+          >
+            <option value="">Select Subjects</option>
+            <option value="">Maths</option>
+        </Form.Control>
       </Form.Group>
-      <Form.Group controlId="formGrade">
-        <Form.Label>Grade</Form.Label>
-        <Form.Control
-          type="text"
-          name="grade"
-          value={formData.grade}
-          onChange={handleChange}
-          placeholder="Enter your grade"
-        />
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        Register
-      </Button>
+        </>
+      )}
+
+      <Row className="mt-4">
+        <Col>
+          {currentStep > 1 && (
+            <Button variant="secondary" onClick={prevStep}>
+              Previous
+            </Button>
+          )}
+        </Col>
+        <Col className="button-container">
+          <Button variant="danger" onClick={handleClear} className="mr-2">
+            Clear
+          </Button>
+          {currentStep < 4 ? (
+            <Button variant="primary" onClick={nextStep}>
+              Next
+            </Button>
+          ) : (
+            <Button variant="success" type="submit">
+              Submit
+            </Button>
+          )}
+        </Col>
+      </Row>
     </Form>
   );
 };
