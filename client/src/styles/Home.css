@@ -1,0 +1,75 @@
+/* src/styles/Home.css */
+
+.banner {
+  background: url('../images/background.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 100px 0;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.form-container .form-group {
+  margin-bottom: 0;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.form-container .form-group:last-child {
+  margin-right: 0;
+}
+
+.card {
+  border: none;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.slick-slide {
+  padding: 10px;
+}
+
+.slick-prev, .slick-next {
+  color: #000;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  color: #000;
+}
+
+.subject-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  height: 150px;
+  transition: transform 0.2s;
+}
+
+.subject-box:hover {
+  transform: scale(1.05);
+}
+
+.subject-icon {
+  width: 50px;
+  height: 50px;
+}

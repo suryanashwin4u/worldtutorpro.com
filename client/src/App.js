@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Home from './pages/Home';
 import StudentRegistration from './pages/StudentRegistration';
 import StudentsList from './pages/StudentsList';
 import TutorRegistration from './pages/TutorRegistration';
@@ -21,7 +22,7 @@ const App = () => {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<StudentRegistration/>} />
+        <Route path="/" element={<Home/>} />
         <Route path="/tutor-registration" element={<TutorRegistration/>} />
         <Route path="/student-registration" element={<StudentRegistration/>} />
         <Route path="/tutors-list" element={<TutorsList/>} />
