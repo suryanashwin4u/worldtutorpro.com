@@ -1,6 +1,17 @@
-/* src/styles/TutorRegistration.css */
-.tutor-icon {
-    width: 300px; /* Adjust the width as needed */
-    height: auto; /* This maintains aspect ratio */
+  /* src/styles/TutorRegistration.css */
+  .tutor-icon {
+    width: 1500px;
+    height: 500px;
   }
-  
+    
+  /* TutorRegistration.css */
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-image: url('../images/background.jpg'); /* Replace 'background-image.jpg' with your image file */
+  background-size: cover;
+  background-position: center;
+}

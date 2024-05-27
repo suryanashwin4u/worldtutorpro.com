@@ -1,43 +1,35 @@
 /* src/styles/TutorRegistrationForm.css */
 .tutor-registration-form {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .tutor-registration-form .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .tutor-registration-form .form-label {
-    font-weight: bold;
-  }
-  
-  .tutor-registration-form .form-control {
-    height: 45px;
-    font-size: 16px;
-  }
-  
-  .tutor-registration-form .form-control[type="textarea"] {
-    height: auto;
-  }
-  
-  .tutor-registration-form .btn-primary .btn-danger{
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-  }  
-  
-  .button-container {
-    display: flex;
-    justify-content: flex-end; /* Align buttons to the right */
-  }
-  
-  /* Style for buttons */
-  .button-container button {
-    margin-left: 10px; /* Add margin between buttons */
-  }
-  
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.tutor-registration-form .form-group {
+  margin-bottom: 15px;
+}
+
+.tutor-registration-form .form-label {
+  font-weight: bold;
+}
+
+.tutor-registration-form .form-control {
+  height: 45px;
+  font-size: 16px;
+}
+
+.tutor-registration-form .form-control[type="textarea"] {
+  height: auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+/* Style for buttons */
+.button-container .btn {
+  margin-left: 10px; /* Add margin between buttons */
+  width: auto;
+}
