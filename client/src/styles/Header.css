@@ -1,14 +1,37 @@
 /* src/styles/Header.css */
+
 .navbar-orange {
   background-color: orange;
+}
+
+.nav-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.nav-link {
+  margin-right: 10px;
   color: black;
+  text-decoration: none;
+  padding: 5px 0px;
+  border: 2px solid black;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
 }
-.nav-brand{
-    font-weight: bold;
-    color: black;
-    ;
+
+.nav-link:hover {
+  background-color: red;
+  color: white;
 }
-.nav-button {
-    margin: 5px;
-    color:black;
-  }
+
+.active-nav-link {
+  font-weight: bold;
+  background-color: black;
+  color: white !important;
+  border: 2px solid white;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+  color: white;
+  background-color: black;
+}

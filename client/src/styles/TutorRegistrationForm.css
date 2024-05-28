@@ -1,35 +1,97 @@
 /* src/styles/TutorRegistrationForm.css */
+
+/* Form container */
 .tutor-registration-form {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  border-radius: 8px;
+    border-radius: 10px;
 }
 
+/* Form groups */
 .tutor-registration-form .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
-.tutor-registration-form .form-label {
-  font-weight: bold;
-}
-
+/* Input fields */
 .tutor-registration-form .form-control {
-  height: 45px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  padding: 7px 15px;
   font-size: 16px;
 }
 
-.tutor-registration-form .form-control[type="textarea"] {
+/* Multi-select fields */
+.tutor-registration-form .form-control[multiple] {
   height: auto;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.button-container {
+/* Placeholder color */
+.tutor-registration-form ::placeholder {
+  color: #aaa;
+}
+
+/* Buttons */
+.tutor-registration-form .btn {
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* Button container */
+.tutor-registration-form .button-container {
   display: flex;
-  justify-content: flex-end; /* Align buttons to the right */
+  justify-content: flex-end;
 }
 
-/* Style for buttons */
-.button-container .btn {
-  margin-left: 10px; /* Add margin between buttons */
-  width: auto;
+/* Specific button styles */
+.tutor-registration-form .btn-danger {
+  background-color: #d9534f;
+  border: none;
+}
+
+.tutor-registration-form .btn-danger:hover {
+  background-color: #c9302c;
+}
+
+.tutor-registration-form .btn-secondary {
+  background-color: #5bc0de;
+  border: none;
+  margin-right: 10px;
+}
+
+.tutor-registration-form .btn-secondary:hover {
+  background-color: #31b0d5;
+}
+
+.tutor-registration-form .btn-primary {
+  background-color: #0275d8;
+  border: none;
+}
+
+.tutor-registration-form .btn-primary:hover {
+  background-color: #025aa5;
+}
+
+.tutor-registration-form .btn-success {
+  background-color: #5cb85c;
+  border: none;
+}
+
+.tutor-registration-form .btn-success:hover {
+  background-color: #449d44;
+}
+
+/* File upload fields */
+.tutor-registration-form .form-group .form-control[type="file"] {
+  padding: 5px 10px;
+  border-radius: 50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+/* Labels for file upload fields */
+.tutor-registration-form .form-group label {
+  color: #333;
+  margin-bottom: 0.5rem;
+  display: block;
 }

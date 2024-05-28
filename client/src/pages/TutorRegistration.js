@@ -1,12 +1,12 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import TutorRegistrationForm from '../components/TutorRegistrationForm';
-// import tutor from '../images/education-bg1.svg';
+import '../styles/Common.css';
 import '../styles/TutorRegistration.css';
 
 const TutorRegistration = () => {
   return (
-    <div className="center-container">
+    <div className="background-container proper-alignment">
       <Container className="mt-5 mb-5">
         <Row>
           <Col md={6} className="d-flex justify-content-center align-items-center">

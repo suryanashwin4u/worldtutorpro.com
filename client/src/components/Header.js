@@ -1,29 +1,30 @@
 // src/components/Header.js
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import '../styles/Header.css';
 
 const Header = () => {
   return (
-    <Navbar className="navbar-orange" variant="wbite" fixed="top">
+    <Navbar className="navbar-orange" variant="white" fixed="top">
       <Container>
-        <Navbar.Brand href="/" className='nav-brand'>IndiaTutorPro.com</Navbar.Brand>
+        <Navbar.Brand href="/" className="nav-brand">IndiaTutorPro.com</Navbar.Brand>
         <Nav className="me-auto">
-          <Button variant="outline-dark" href="/" className="nav-button">
+          <NavLink to="/" exact className="nav-link" activeClassName="active-nav-link">
             Home
-          </Button>
-          <Button variant="outline-dark" href="/tutor-registration" className="nav-button">
+          </NavLink>
+          <NavLink to="/tutor-registration" className="nav-link" activeClassName="active-nav-link">
             Tutors Registration Form
-          </Button>
-          <Button variant="outline-dark" href="/student-registration" className="nav-button">
+          </NavLink>
+          <NavLink to="/student-registration" className="nav-link" activeClassName="active-nav-link">
             Students Registration Form
-          </Button>
-          <Button variant="outline-dark" href="/tutors-list" className="nav-button">
+          </NavLink>
+          <NavLink to="/tutors-list" className="nav-link" activeClassName="active-nav-link">
             Tutors List
-          </Button>
-          <Button variant="outline-dark" href="/students-list" className="nav-button">
+          </NavLink>
+          <NavLink to="/students-list" className="nav-link" activeClassName="active-nav-link">
             Students List
-          </Button>
+          </NavLink>
         </Nav>
       </Container>
     </Navbar>

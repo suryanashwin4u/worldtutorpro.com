@@ -1,0 +1,82 @@
+/* src/styles/StudentRegistrationForm.css */
+
+/* Form container */
+.student-registration-form {
+    border-radius: 10px;
+  }
+  
+  /* Form groups */
+  .student-registration-form .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  /* Input fields */
+  .student-registration-form .form-control {
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+  
+  /* Multi-select fields */
+  .student-registration-form .form-control[multiple] {
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  /* Placeholder color */
+  .student-registration-form ::placeholder {
+    color: #aaa;
+  }
+  
+  /* Buttons */
+  .student-registration-form .btn {
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  /* Button container */
+  .student-registration-form .button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Specific button styles */
+  .student-registration-form .btn-danger {
+    background-color: #d9534f;
+    border: none;
+  }
+  
+  .student-registration-form .btn-danger:hover {
+    background-color: #c9302c;
+  }
+  
+  .student-registration-form .btn-secondary {
+    background-color: #5bc0de;
+    border: none;
+    margin-right: 10px;
+  }
+  
+  .student-registration-form .btn-secondary:hover {
+    background-color: #31b0d5;
+  }
+  
+  .student-registration-form .btn-primary {
+    background-color: #0275d8;
+    border: none;
+  }
+  
+  .student-registration-form .btn-primary:hover {
+    background-color: #025aa5;
+  }
+  
+  .student-registration-form .btn-success {
+    background-color: #5cb85c;
+    border: none;
+  }
+  
+  .student-registration-form .btn-success:hover {
+    background-color: #449d44;
+  }  

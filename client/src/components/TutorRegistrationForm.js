@@ -85,10 +85,10 @@ const TutorRegistrationForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} >
+    <Form onSubmit={handleSubmit} className="tutor-registration-form">
       {currentStep === 1 && (
         <>
-          <Form.Group className="mb-3" controlId="formName" >
+          <Form.Group className="mb-3" controlId="formName">
             <Form.Control
               type="text"
               name="name"
@@ -326,7 +326,7 @@ const TutorRegistrationForm = () => {
       {currentStep === 5 && (
         <>
           <Form.Group className="mb-3" controlId="formPhoto">
-            <Form.Label className='text-white'>Upload Photo (Only JPG Allowed)</Form.Label>
+            <Form.Label className='fw-bold'>Upload Photo (Only JPG Allowed) *</Form.Label>
             <Form.Control
               type="file"
               name="photo"
@@ -335,7 +335,7 @@ const TutorRegistrationForm = () => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formIdProofFile">
-            <Form.Label className='text-white'>Upload ID Proof (Only JPG Allowed)</Form.Label>
+            <Form.Label className='fw-bold'>Upload ID Proof (Only JPG Allowed) *</Form.Label>
             <Form.Control
               type="file"
               name="idProofFile"
@@ -344,7 +344,7 @@ const TutorRegistrationForm = () => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formEducationProofFile">
-            <Form.Label className='text-white'>Upload Highest Education Proof (Only JPG Allowed)</Form.Label>
+            <Form.Label className='fw-bold'>Upload Highest Education Proof (Only JPG Allowed) *</Form.Label>
             <Form.Control
               type="file"
               name="educationProof"

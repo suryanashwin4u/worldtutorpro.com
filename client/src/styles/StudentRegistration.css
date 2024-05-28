@@ -3,4 +3,9 @@
     width: 300px; /* Adjust the width as needed */
     height: auto; /* This maintains aspect ratio */
   }
-  
+
+.proper-alignment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

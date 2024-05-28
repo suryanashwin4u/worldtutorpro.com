@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
+import '../styles/Common.css';
 import '../styles/StudentsList.css';
 
 const StudentsList = () => {
@@ -15,8 +16,9 @@ const StudentsList = () => {
   }, []);
 
   return (
-    <Container className="mt-5">
-      <h1 className="mb-4 text-center">Students List</h1>
+    <div className='background-container'>
+    <Container>
+      <h1 className="mb-4 text-center text-capitalize">Students List</h1>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -54,6 +56,7 @@ const StudentsList = () => {
         </tbody>
       </Table>
     </Container>
+    </div>
   );
 };
 

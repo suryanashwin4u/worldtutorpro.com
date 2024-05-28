@@ -4,6 +4,7 @@ import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import '../styles/Common.css';
 import '../styles/Home.css';
 
 
@@ -80,7 +81,7 @@ const Home = () => {
   };
 
   return (
-    <div className="banner">
+    <div className="background-container">
       <div className="text-white text-center text-capitalize">
         <Container>
           <h1>Welcome to IndiaTutorPro.com</h1>
