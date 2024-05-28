@@ -1,0 +1,47 @@
+/* donate-us.css */
+.proper-alignment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Style for the form */
+  .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 25px;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Style for the button */
+  .btn-donate {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-donate:hover {
+    background-color: #0056b3;
+  }  
+  .info-column {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .info-column h2 {
+    margin-bottom: 15px;
+  }
+  
+  .info-column p {
+    margin-bottom: 15px;
+  }
+  
+  .donation-list li {
+    color: red;
+  }

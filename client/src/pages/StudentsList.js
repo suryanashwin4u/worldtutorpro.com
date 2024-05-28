@@ -18,8 +18,8 @@ const StudentsList = () => {
   return (
     <div className='background-container'>
     <Container>
-      <h1 className="mb-4 text-center text-capitalize">Students List</h1>
-      <Table striped bordered hover>
+      {/* <h1 className="mb-4 text-center text-capitalize">Students List</h1> */}
+      <Table striped bordered hover className='resizing'>
         <thead>
           <tr>
             <th>S.No.</th>

@@ -1,0 +1,19 @@
+.feedback-form {
+    border-radius: 5px;
+}
+
+.feedback-form .form-control {
+    margin-bottom: 1rem;
+}
+
+.btn-clear {
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+
+.btn-submit {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}

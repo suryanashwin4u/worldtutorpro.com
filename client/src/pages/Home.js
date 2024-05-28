@@ -82,6 +82,7 @@ const Home = () => {
 
   return (
     <div className="background-container">
+    <div className='resizing'>
       <div className="text-white text-center text-capitalize">
         <Container>
           <h1>Welcome to IndiaTutorPro.com</h1>
@@ -192,6 +193,7 @@ const Home = () => {
           </Row>
         </section>
       </Container>
+    </div>
     </div>
   );
 };

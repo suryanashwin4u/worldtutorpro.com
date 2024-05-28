@@ -5,3 +5,7 @@
     min-height: 100vh; /* This ensures that the background covers the entire viewport height */
     background-attachment: fixed;
 }
+
+.resizing{
+    margin-top: 55px;
+}
