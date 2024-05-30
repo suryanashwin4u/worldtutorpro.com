@@ -14,7 +14,7 @@ const StudentRegistration = () => {
             {/* <Image src={studentIcon} alt="Student" className="student-icon" /> */}
           </Col>
           <Col md={6}>
-            <h2 className="mb-4 text-center text-white text-capitalize">Students Registration Form</h2>
+            <h2 className="mb-4 text-center text-capitalize">Students Registration Form</h2>
             <StudentRegistrationForm />
           </Col>
         </Row>

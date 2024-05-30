@@ -9,7 +9,7 @@ app.use(express.json());
 
 const port = 5001; // Change to a different port number
 
-mongoose.connect('mongodb://localhost:27017/mernstack')
+mongoose.connect('mongodb://localhost:27017/worldtutorpro')
   .then(() => {
     console.log('Connected to MongoDB');
   })
@@ -17,8 +17,8 @@ mongoose.connect('mongodb://localhost:27017/mernstack')
     console.error(err);
   });
 
-app.get('/', (req, res) => {
-  res.send('Hello, world!');
+app.get('/api/tutors-registration', (req, res) => {
+  res.send('tutors registrations successfull');
 });
 
 app.listen(port, () => {

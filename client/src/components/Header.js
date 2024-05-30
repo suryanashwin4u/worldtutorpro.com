@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <Navbar className="navbar-orange" variant="white" fixed="top">
       <Container>
-        <Navbar.Brand href="/" className="nav-brand">IndiaTutorPro.com</Navbar.Brand>
+        <Navbar.Brand href="/" className="nav-brand text-dark">IndiaTutorPro.com</Navbar.Brand>
         <Nav className="me-auto">
           <NavLink to="/" exact className="nav-link" activeClassName="active-nav-link">
             Home
