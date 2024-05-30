@@ -2,8 +2,11 @@ import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import AskAnswer from './pages/AskAnswer';
+import Blogs from './pages/Blogs';
 import DonateUs from './pages/DonateUs';
 import Feedback from './pages/FeedBack';
+import FreeClasses from './pages/FreeClasses';
 import Home from './pages/Home';
 import StudentRegistration from './pages/StudentRegistration';
 import StudentsList from './pages/StudentsList';
@@ -29,8 +32,11 @@ const App = () => {
         <Route path="/student-registration" element={<StudentRegistration/>} />
         <Route path="/tutors-list" element={<TutorsList/>} />
         <Route path="/students-list" element={<StudentsList/>} />
-        <Route path="/donate-us" element={<DonateUs/>} />
+        <Route path="/free-classes" element={<FreeClasses/>} />
+        <Route path="/ask-answer" element={<AskAnswer/>} />
+        <Route path="/blogs" element={<Blogs/>} />
         <Route path="/feedback" element={<Feedback/>} />
+        <Route path="/donate-us" element={<DonateUs/>} />
       </Routes>
       <Footer />
     </Router>

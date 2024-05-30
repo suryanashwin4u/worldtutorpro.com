@@ -14,16 +14,25 @@ const Header = () => {
             Home
           </NavLink>
           <NavLink to="/tutor-registration" className="nav-link" activeClassName="active-nav-link">
-            Tutors Registration Form
+            Tutors Form
           </NavLink>
           <NavLink to="/student-registration" className="nav-link" activeClassName="active-nav-link">
-            Students Registration Form
+            Students Form
           </NavLink>
           <NavLink to="/tutors-list" className="nav-link" activeClassName="active-nav-link">
             Tutors List
           </NavLink>
           <NavLink to="/students-list" className="nav-link" activeClassName="active-nav-link">
             Students List
+          </NavLink>
+          <NavLink to="/free-classes" className="nav-link" activeClassName="active-nav-link">
+            Free Classes
+          </NavLink>
+          <NavLink to="/ask-answer" className="nav-link" activeClassName="active-nav-link">
+            Ask & Answer
+          </NavLink>
+          <NavLink to="/blogs" className="nav-link" activeClassName="active-nav-link">
+            Blogs
           </NavLink>
           <NavLink to="/feedback" className="nav-link" activeClassName="active-nav-link">
             FeedBack
