@@ -4,7 +4,7 @@ import '../styles/Common.css';
 
 const App = () => {
   return (
-    <div className="text-dark background-container">
+    <div className="text-dark">
       <h1>Blog Page</h1>
       <InfiniteScrollComponent />
     </div>

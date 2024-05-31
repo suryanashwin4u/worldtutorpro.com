@@ -37,7 +37,7 @@ function FeedbackForm() {
     };
 
     return (
-        <div className='background-container proper-alignment'>
+        <div className='proper-alignment'>
             <Container className="mt-5 mb-5">
                 <Row>
                     <Col lg={6} className="d-flex justify-content-center align-items-center">
@@ -45,7 +45,7 @@ function FeedbackForm() {
                     </Col>
 
                     <Col lg={6}>
-                        <h3 className='mb-4 text-center text-capitalize text-white'>Feedback form</h3>
+                        <h3 className='mb-4 text-center text-capitalize text-dark'>Feedback form</h3>
                         <Form onSubmit={handleSubmit} className="feedback-form">
                             <Form.Group controlId="formName">
                                 <Form.Control

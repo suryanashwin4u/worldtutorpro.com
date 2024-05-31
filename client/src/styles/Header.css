@@ -1,11 +1,31 @@
-/* src/styles/Header.css */
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header-section-1 {
+  background-color: orange;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-section-2 {
+  background-color: orange;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+}
 
 .navbar-orange {
   background-color: orange;
 }
 
 .nav-brand {
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
@@ -13,7 +33,7 @@
   margin-right: 10px;
   color: black;
   text-decoration: none;
-  padding: 5px 0px;
+  padding: 5px 0;
   border: 2px solid black;
   border-radius: 10px;
   transition: background-color 0.3s, color 0.3s;
@@ -31,7 +51,7 @@
   border: 2px solid white;
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
   color: white;
   background-color: black;
 }

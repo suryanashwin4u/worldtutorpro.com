@@ -20,7 +20,7 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <div className='background-container proper-alignment'>
+    <div className='proper-alignment'>
       <div className='container'>
         <div className="row">
           <div className="col-md-6">

@@ -1,13 +1,14 @@
 
 .form-container {
-  background: white;
-  padding: 20px;
+  padding: 10px;
   border-radius: 50px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  border-style: dashed;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  background-color: white;
 }
 
 .form-container .form-group {
@@ -46,7 +47,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   color: white;
   text-align: center;
@@ -54,11 +55,40 @@
   transition: transform 0.2s;
 }
 
-.subject-box:hover {
-  transform: scale(1.05);
-}
-
 .subject-icon {
   width: 50px;
   height: 50px;
+}
+
+.adding-style{
+  border-style: dashed;
+  border-radius: 20px;
+  padding: 30px;
+  background: white;
+}
+
+.styling-selectors{
+  width: 100%;
+  margin: 10px;
+}
+
+.box-styling{
+  border-style: dashed;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.container-styling{
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.slick-prev:before, .slick-next:before{
+  color: black;
+}
+
+.slick-initialized .slick-slide{
+  border-style: dashed;
+  border-radius: 15px;
+  /* margin: 5px; */
 }

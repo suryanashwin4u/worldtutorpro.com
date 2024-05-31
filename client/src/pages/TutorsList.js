@@ -16,10 +16,10 @@ const TutorsList = () => {
   }, []);
 
   return (
-    <div className='background-container'>
+    <div className=''>
       <Container>
           {/* <h1 className="text-center text-capitalize">Tutors List</h1> */}
-          <Table striped bordered hover className='resizing'>
+          <Table striped bordered hover>
             <thead>
               <tr>
                 <th>S.No.</th>

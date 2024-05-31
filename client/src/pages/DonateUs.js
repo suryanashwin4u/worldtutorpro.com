@@ -69,7 +69,7 @@ function DonationForm() {
     };
 
     return (
-        <div className='background-container proper-alignment'>
+        <div className='proper-alignment'>
             <Container>
                 <Row>
                     <Col lg={6} className="info-column">
@@ -96,7 +96,7 @@ function DonationForm() {
                     </Col>
 
                     <Col lg={6}>
-                        <h2 className="text-white text-center text-capitalize mb-4">donate us</h2>
+                        <h2 className="text-dark text-center text-capitalize mb-4">donate us</h2>
                         <Form onSubmit={handleSubmit}>
                             <Form.Group controlId="formAmount">
                                 <Form.Control

@@ -7,7 +7,7 @@ import '../styles/StudentRegistration.css';
 
 const StudentRegistration = () => {
   return (
-    <div className="background-container proper-alignment">
+    <div className=" proper-alignment">
       <Container className="mt-5 mb-5">
         <Row>
           <Col md={6} className="d-flex justify-content-center align-items-center">
