@@ -13,7 +13,7 @@ const Footer = () => {
       <div className='container d-flex justify-content-between align-items-center'>
 
       <div className='d-flex'>
-        <strong>&copy; {new Date().getFullYear()} IndiaTutorPro.Com &nbsp;</strong> All Rights Reserved.
+        <strong>&copy; {new Date().getFullYear()} WorldTutorPro.Com &nbsp;</strong> All Rights Reserved.
       </div>
       <div className='d-flex'>
         <a href="tel:+918076452716" className="phone-link" title='+91-8076452716'>

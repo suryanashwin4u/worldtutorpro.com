@@ -8,16 +8,16 @@ const Header = () => {
   return (
     <Navbar className="navbar-orange" variant="white" fixed="top">
       <Container>
-        <Navbar.Brand href="/" className="nav-brand text-dark">IndiaTutorPro.com</Navbar.Brand>
+        <Navbar.Brand href="/" className="nav-brand text-dark">WorldTutorPro.com</Navbar.Brand>
         <Nav className="me-auto">
           <NavLink to="/" exact className="nav-link" activeClassName="active-nav-link">
             Home
           </NavLink>
           <NavLink to="/tutor-registration" className="nav-link" activeClassName="active-nav-link">
-            Tutors Form
+            Tutors Registration Form
           </NavLink>
           <NavLink to="/student-registration" className="nav-link" activeClassName="active-nav-link">
-            Students Form
+            Students Registration Form
           </NavLink>
           <NavLink to="/tutors-list" className="nav-link" activeClassName="active-nav-link">
             Tutors List
@@ -39,6 +39,9 @@ const Header = () => {
           </NavLink>
           <NavLink to="/donate-us" className="nav-link" activeClassName="active-nav-link">
             Donate Us
+          </NavLink>
+          <NavLink to="/login" className="nav-link" activeClassName="active-nav-link">
+            Login
           </NavLink>
         </Nav>
       </Container>

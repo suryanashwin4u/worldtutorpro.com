@@ -8,6 +8,7 @@ import DonateUs from './pages/DonateUs';
 import Feedback from './pages/FeedBack';
 import FreeClasses from './pages/FreeClasses';
 import Home from './pages/Home';
+import Login from './pages/Login';
 import StudentRegistration from './pages/StudentRegistration';
 import StudentsList from './pages/StudentsList';
 import TutorRegistration from './pages/TutorRegistration';
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/blogs" element={<Blogs/>} />
         <Route path="/feedback" element={<Feedback/>} />
         <Route path="/donate-us" element={<DonateUs/>} />
+        <Route path="/login" element={<Login/>} />
       </Routes>
       <Footer />
     </Router>

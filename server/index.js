@@ -1,26 +1,7 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
+const { app, port } = require('./server');
+const db = require('./database');
 
-const app = express();
-
-app.use(cors());
-app.use(express.json());
-
-const port = 5001; // Change to a different port number
-
-mongoose.connect('mongodb://localhost:27017/worldtutorpro')
-  .then(() => {
-    console.log('Connected to MongoDB');
-  })
-  .catch(err => {
-    console.error(err);
-  });
-
-app.get('/api/tutors-registration', (req, res) => {
-  res.send('tutors registrations successfull');
-});
-
+// Start the server
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });

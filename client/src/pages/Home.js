@@ -1,12 +1,12 @@
 // src/pages/Home.js
 import React, { useState } from 'react';
 import {
-  Button,
-  Card,
-  Col,
-  Container,
-  Form,
-  Row
+    Button,
+    Card,
+    Col,
+    Container,
+    Form,
+    Row
 } from 'react-bootstrap';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick-theme.css";
@@ -141,7 +141,7 @@ const Home = () => {
             <div className='resizing'>
                 <div className="text-dark text-center text-capitalize">
                     <Container>
-                        <h1>Welcome to IndiaTutorPro.com</h1>
+                        <h1>Welcome to WorldTutorPro.com</h1>
                         <p>Find students and tutors for online/offline/home tuitions classes at
                             affordable rates near your location</p>
                     </Container>

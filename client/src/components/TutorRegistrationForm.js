@@ -44,10 +44,24 @@ const TutorRegistrationForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
+
+    const data = new FormData();
+    for (const key in formData) {
+      data.append(key, formData[key]);
+    }
+
+    try {
+      const response = await fetch('http://localhost:5001/api/tutor-registration', {
+        method: 'POST',
+        body: data,
+      });
+      const result = await response.json();
+      console.log('Response:', result);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
   };
 
   const handleClear = () => {

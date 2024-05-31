@@ -4,8 +4,3 @@
     height: auto; /* This maintains aspect ratio */
   }
 
-.proper-alignment{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}

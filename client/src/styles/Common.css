@@ -9,3 +9,9 @@
 .resizing{
     margin-top: 55px;
 }
+
+.proper-alignment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
