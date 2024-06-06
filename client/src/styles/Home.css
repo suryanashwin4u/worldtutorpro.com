@@ -1,13 +1,11 @@
 
 .form-container {
-  padding: 10px;
-  border-radius: 50px;
+  padding: 19px;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-style: dashed;
   margin-bottom: 30px;
-  margin-top: 30px;
   background-color: white;
 }
 
@@ -28,10 +26,6 @@
 
 .card:hover {
   transform: scale(1.05);
-}
-
-.slick-slide {
-  padding: 10px;
 }
 
 .slick-prev, .slick-next {
@@ -61,10 +55,9 @@
 }
 
 .adding-style{
-  border-style: dashed;
-  border-radius: 20px;
-  padding: 30px;
-  background: white;
+    border-radius: 20px;
+    padding: 30px;
+    background: white;
 }
 
 .styling-selectors{
@@ -73,22 +66,19 @@
 }
 
 .box-styling{
-  border-style: dashed;
   border-radius: 20px;
   margin: 5px;
 }
 
-.container-styling{
-  margin-top: 10%;
-  margin-bottom: 5%;
-}
+/* .container-styling{
+  margin-top: 6%;
+  margin-bottom: 3.8%;
+} */
 
 .slick-prev:before, .slick-next:before{
   color: black;
 }
 
 .slick-initialized .slick-slide{
-  border-style: dashed;
-  border-radius: 15px;
-  /* margin: 5px; */
+    border-radius: 15px;
 }

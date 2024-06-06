@@ -98,165 +98,180 @@ const Home = () => {
 
     return (
         <Container className="container-styling">
-            <div className="text-dark text-center text-capitalize">
-                <h4 className='mt-4'>Find students and tutors for online/offline/home tuitions
-                    classes at affordable rates near your location</h4>
+
+            <div className=''>
+                <div className="text-dark text-center text-capitalize">
+                    <h4 className='mt-5 text-white text-center text-capitalize'>Find students and tutors for online/offline/home tuitions</h4>
+                </div>
+
+                <div className="form-container">
+                    <Form.Group controlId="formUserType" className='styling-selectors'>
+                        <Form.Select value={userType} onChange={(e) => setUserType(e.target.value)}>
+                            <option value="">Select User Type</option>
+                            <option value="student">Student</option>
+                            <option value="tutor">Tutor</option>
+                        </Form.Select>
+                    </Form.Group>
+
+                    <Form.Group controlId="formClassCategory" className='styling-selectors'>
+                        <Form.Select
+                            value={classCategory}
+                            onChange={(e) => setClassCategory(e.target.value)}>
+                            <option value="">Select Class Category</option>
+                            <option value="primary">Primary</option>
+                            <option value="secondary">Secondary</option>
+                            <option value="higher-secondary">Higher Secondary</option>
+                        </Form.Select>
+                    </Form.Group>
+
+                    <Form.Group controlId="formSubjectCategory" className='styling-selectors'>
+                        <Form.Select
+                            value={subjectCategory}
+                            onChange={(e) => setSubjectCategory(e.target.value)}>
+                            <option value="">Select Subject Category</option>
+                            <option value="math">Math</option>
+                            <option value="science">Science</option>
+                            <option value="english">English</option>
+                            <option value="history">History</option>
+                            {/* Add more subjects as needed */}
+                        </Form.Select>
+                    </Form.Group>
+
+                    <Form.Group controlId="formLocation" className='styling-selectors'>
+                        <Form.Select value={location} onChange={(e) => setLocation(e.target.value)}>
+                            <option value="">Select Location</option>
+                            {/* Add more subjects as needed */}
+                        </Form.Select>
+                    </Form.Group>
+
+                    <Button variant="primary" onClick={handleSearch} className='styling-selectors'>Find</Button>
+                </div>
             </div>
 
-            <div className="form-container">
-                <Form.Group controlId="formUserType" className='styling-selectors'>
-                    <Form.Select value={userType} onChange={(e) => setUserType(e.target.value)}>
-                        <option value="">Select User Type</option>
-                        <option value="student">Student</option>
-                        <option value="tutor">Tutor</option>
-                    </Form.Select>
-                </Form.Group>
-
-                <Form.Group controlId="formClassCategory" className='styling-selectors'>
-                    <Form.Select
-                        value={classCategory}
-                        onChange={(e) => setClassCategory(e.target.value)}>
-                        <option value="">Select Class Category</option>
-                        <option value="primary">Primary</option>
-                        <option value="secondary">Secondary</option>
-                        <option value="higher-secondary">Higher Secondary</option>
-                    </Form.Select>
-                </Form.Group>
-
-                <Form.Group controlId="formSubjectCategory" className='styling-selectors'>
-                    <Form.Select
-                        value={subjectCategory}
-                        onChange={(e) => setSubjectCategory(e.target.value)}>
-                        <option value="">Select Subject Category</option>
-                        <option value="math">Math</option>
-                        <option value="science">Science</option>
-                        <option value="english">English</option>
-                        <option value="history">History</option>
-                        {/* Add more subjects as needed */}
-                    </Form.Select>
-                </Form.Group>
-
-                <Form.Group controlId="formLocation" className='styling-selectors'>
-                    <Form.Select value={location} onChange={(e) => setLocation(e.target.value)}>
-                        <option value="">Select Location</option>
-                        {/* Add more subjects as needed */}
-                    </Form.Select>
-                </Form.Group>
-
-                <Button variant="primary" onClick={handleSearch} className='styling-selectors'>Find</Button>
+            <div className=''>
+                <h4 className='text-center text-capitalize text-white'>Top Tutors Near Your Location</h4>
+                <section className="mb-4 text-center text-capitalize adding-style">
+                    <Slider {...sliderSettings}>
+                        {teachers.map(teacher => (
+                            <div key={teacher.id}>
+                                <Card>
+                                    <Card.Img variant="top" src={teacher.photo} alt={teacher.name}/>
+                                    <Card.Body>
+                                        <Card.Title>{teacher.name}</Card.Title>
+                                        <Card.Text>Rating: {teacher.rating}
+                                            / 5</Card.Text>
+                                        <Card.Text>Subjects: {teacher
+                                                .subjects
+                                                .join(', ')}</Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </div>
+                        ))}
+                    </Slider>
+                </section>
             </div>
 
-            <section className="mb-4 text-center text-capitalize adding-style">
-                <h5>Top Tutors Near Your Location</h5>
-                <Slider {...sliderSettings}>
-                    {teachers.map(teacher => (
-                        <div key={teacher.id}>
-                            <Card>
-                                <Card.Img variant="top" src={teacher.photo} alt={teacher.name}/>
-                                <Card.Body>
-                                    <Card.Title>{teacher.name}</Card.Title>
-                                    <Card.Text>Rating: {teacher.rating}
-                                        / 5</Card.Text>
-                                    <Card.Text>Subjects: {teacher
-                                            .subjects
-                                            .join(', ')}</Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </div>
-                    ))}
-                </Slider>
-            </section>
-
-            <section className="mb-4 text-center text-capitalize adding-style">
-                <h5>Active Students looking for you in Your Location</h5>
-                <Slider {...sliderSettings}>
-                    {studentsLookingForTutors.map(student => (
-                        <div key={student.id}>
-                            <Card>
-                                <Card.Img variant="top" src={student.photo} alt={student.name}/>
-                                <Card.Body>
-                                    <Card.Title>{student.name}</Card.Title>
-                                    <Card.Text>Location: {student.location}</Card.Text>
-                                    <Card.Text>Subjects: {student
-                                            .subjects
-                                            .join(', ')}</Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </div>
-                    ))}
-                </Slider>
-            </section>
-
-            <section className="mb-4 text-center text-capitalize adding-style">
-                <h5>tutions by subjects</h5>
-                <Row>
-                    {popularSubjects.map(subject => (
-                        <Col key={subject.id} xs={6} md={4} lg={3} className="box-styling">
-                            <div className="subject-box">
-                                <img src={subject.icon} alt={subject.name} className="subject-icon"/>
-                                <p className="subject-name">{subject.name}</p>
+            <div className=''>
+                <h4 className='text-center text-capitalize text-white'>Active Students looking for you in Your Location</h4>
+                <section className="mb-4 text-center text-capitalize adding-style">
+                    <Slider {...sliderSettings}>
+                        {studentsLookingForTutors.map(student => (
+                            <div key={student.id}>
+                                <Card>
+                                    <Card.Img variant="top" src={student.photo} alt={student.name}/>
+                                    <Card.Body>
+                                        <Card.Title>{student.name}</Card.Title>
+                                        <Card.Text>Location: {student.location}</Card.Text>
+                                        <Card.Text>Subjects: {student
+                                                .subjects
+                                                .join(', ')}</Card.Text>
+                                    </Card.Body>
+                                </Card>
                             </div>
-                        </Col>
-                    ))}
-                </Row>
-            </section>
+                        ))}
+                    </Slider>
+                </section>
+            </div>
 
-            <section className="mb-4 text-center text-capitalize adding-style">
-                <h5>tution by cities</h5>
-                <Row>
-                    {popularSubjects.map(subject => (
-                        <Col key={subject.id} xs={6} md={4} lg={3} className="box-styling">
-                            <div className="subject-box">
-                                <img src={subject.icon} alt={subject.name} className="subject-icon"/>
-                                <p className="subject-name">{subject.name}</p>
-                            </div>
-                        </Col>
-                    ))}
-                </Row>
-            </section>
+            <div className=''>
+                <h4 className='text-center text-capitalize text-white'>tutions by subjects</h4>
+                <section className="mb-4 text-center text-capitalize adding-style">
+                    <Row>
+                        {popularSubjects.map(subject => (
+                            <Col key={subject.id} xs={6} md={4} lg={3} className="box-styling">
+                                <div className="subject-box">
+                                    <img src={subject.icon} alt={subject.name} className="subject-icon"/>
+                                    <p className="subject-name">{subject.name}</p>
+                                </div>
+                            </Col>
+                        ))}
+                    </Row>
+                </section>
+            </div>
 
-            <section className="mb-4 text-center text-capitalize adding-style">
-                <h5>tutions by category</h5>
-                <Row>
-                    {popularSubjects.map(subject => (
-                        <Col key={subject.id} xs={6} md={4} lg={3} className="box-styling">
-                            <div className="subject-box">
-                                <img src={subject.icon} alt={subject.name} className="subject-icon"/>
-                                <p className="subject-name">{subject.name}</p>
-                            </div>
-                        </Col>
-                    ))}
-                </Row>
-            </section>
+            <div className=''>
+                <h4 className='text-center text-capitalize text-white'>tution by cities</h4>
+                <section className="mb-4 text-center text-capitalize adding-style">
+                    <Row>
+                        {popularSubjects.map(subject => (
+                            <Col key={subject.id} xs={6} md={4} lg={3} className="box-styling">
+                                <div className="subject-box">
+                                    <img src={subject.icon} alt={subject.name} className="subject-icon"/>
+                                    <p className="subject-name">{subject.name}</p>
+                                </div>
+                            </Col>
+                        ))}
+                    </Row>
+                </section>
+            </div>
 
-            <section className="mb-4 text-center text-capitalize adding-style">
-                <h5>tutions by classes</h5>
-                <Row>
-                    {popularSubjects.map(subject => (
-                        <Col key={subject.id} xs={6} md={4} lg={3} className="box-styling">
-                            <div className="subject-box">
-                                <img src={subject.icon} alt={subject.name} className="subject-icon"/>
-                                <p className="subject-name">{subject.name}</p>
-                            </div>
-                        </Col>
-                    ))}
-                </Row>
-            </section>
+            <div className=''>
+                <h4 className='text-center text-capitalize text-white'>tutions by category</h4>
+                <section className="mb-4 text-center text-capitalize adding-style">
+                    <Row>
+                        {popularSubjects.map(subject => (
+                            <Col key={subject.id} xs={6} md={4} lg={3} className="box-styling">
+                                <div className="subject-box">
+                                    <img src={subject.icon} alt={subject.name} className="subject-icon"/>
+                                    <p className="subject-name">{subject.name}</p>
+                                </div>
+                            </Col>
+                        ))}
+                    </Row>
+                </section>
+            </div>
 
-            <section className="mb-4 text-center text-capitalize adding-style">
-                <h5>other tuitions</h5>
-                <Row>
-                    {popularSubjects.map(subject => (
-                        <Col key={subject.id} xs={6} md={4} lg={3} className="box-styling">
-                            <div className="subject-box">
-                                <img src={subject.icon} alt={subject.name} className="subject-icon"/>
-                                <p className="subject-name">{subject.name}</p>
-                            </div>
-                        </Col>
-                    ))}
-                </Row>
-            </section>
+            <div className=''>
+                <h4 className='text-center text-capitalize text-white'>tutions by classes</h4>
+                <section className="mb-4 text-center text-capitalize adding-style">
+                    <Row>
+                        {popularSubjects.map(subject => (
+                            <Col key={subject.id} xs={6} md={4} lg={3} className="box-styling">
+                                <div className="subject-box">
+                                    <img src={subject.icon} alt={subject.name} className="subject-icon"/>
+                                    <p className="subject-name">{subject.name}</p>
+                                </div>
+                            </Col>
+                        ))}
+                    </Row>
+                </section>
+            </div>
 
+            <div className=''>
+                <h4 className='text-center text-capitalize text-white'>other tuitions</h4>
+                <section className="mb-4 text-center text-capitalize adding-style">
+                    <Row>
+                        {popularSubjects.map(subject => (
+                            <Col key={subject.id} xs={6} md={4} lg={3} className="box-styling">
+                                <div className="subject-box">
+                                    <img src={subject.icon} alt={subject.name} className="subject-icon"/>
+                                    <p className="subject-name">{subject.name}</p>
+                                </div>
+                            </Col>
+                        ))}
+                    </Row>
+                </section>
+            </div>
         </Container>
     );
 };

@@ -96,8 +96,8 @@ function DonationForm() {
                     </Col>
 
                     <Col lg={6}>
-                        <h2 className="text-dark text-center text-capitalize mb-4">donate us</h2>
-                        <Form onSubmit={handleSubmit}>
+                        <h2 className="text-white text-center text-capitalize mb-4">donate us</h2>
+                        <Form onSubmit={handleSubmit} className='form-setting'>
                             <Form.Group controlId="formAmount">
                                 <Form.Control
                                     type="text"

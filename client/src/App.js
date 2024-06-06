@@ -14,35 +14,35 @@ import StudentsList from './pages/StudentsList';
 import TutorRegistration from './pages/TutorRegistration';
 import TutorsList from './pages/TutorsList';
 import './styles/App.css';
+import './styles/Common.css';
 
 const App = () => {
-  // const [message, setMessage] = useState('');
+    // const [message, setMessage] = useState(''); useEffect(() => {
+    // axios.get('http://localhost:5001/')     .then(response =>
+    // setMessage(response.data))     .catch(error => console.error('There was an
+    // error!', error)); }, []);
 
-  // useEffect(() => {
-  //   axios.get('http://localhost:5001/')
-  //     .then(response => setMessage(response.data))
-  //     .catch(error => console.error('There was an error!', error));
-  // }, []);
-
-  return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/tutor-registration" element={<TutorRegistration/>} />
-        <Route path="/student-registration" element={<StudentRegistration/>} />
-        <Route path="/tutors-list" element={<TutorsList/>} />
-        <Route path="/students-list" element={<StudentsList/>} />
-        <Route path="/free-classes" element={<FreeClasses/>} />
-        <Route path="/ask-answer" element={<AskAnswer/>} />
-        <Route path="/blogs" element={<Blogs/>} />
-        <Route path="/feedback" element={<Feedback/>} />
-        <Route path="/donate-us" element={<DonateUs/>} />
-        <Route path="/login" element={<Login/>} />
-      </Routes>
-      <Footer />
-    </Router>
-  );
+    return (
+        <div className='background-image'>
+            <Router>
+                <Header/>
+                <Routes>
+                    <Route path="/" element={< Home />}/>
+                    <Route path="/tutor-registration" element={< TutorRegistration />}/>
+                    <Route path="/student-registration" element={< StudentRegistration />}/>
+                    <Route path="/tutors-list" element={< TutorsList />}/>
+                    <Route path="/students-list" element={< StudentsList />}/>
+                    <Route path="/free-classes" element={< FreeClasses />}/>
+                    <Route path="/ask-answer" element={< AskAnswer />}/>
+                    <Route path="/blogs" element={< Blogs />}/>
+                    <Route path="/feedback" element={< Feedback />}/>
+                    <Route path="/donate-us" element={< DonateUs />}/>
+                    <Route path="/login" element={< Login />}/>
+                </Routes>
+                <Footer/>
+            </Router>
+        </div>
+    );
 };
 
 export default App;

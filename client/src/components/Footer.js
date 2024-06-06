@@ -9,7 +9,7 @@ import '../styles/Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer-bg text-black p-3 text-left d-flex fixed-bottom">
+    <footer className="footer-bg text-black p-3 text-left d-flex ">
       <div className='container d-flex justify-content-between align-items-center'>
 
       <div className='d-flex'>

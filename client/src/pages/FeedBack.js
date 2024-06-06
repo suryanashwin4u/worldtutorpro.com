@@ -45,7 +45,7 @@ function FeedbackForm() {
                     </Col>
 
                     <Col lg={6}>
-                        <h3 className='mb-4 text-center text-capitalize text-dark'>Feedback form</h3>
+                        <h3 className='mb-4 text-center text-capitalize text-white'>Feedback form</h3>
                         <Form onSubmit={handleSubmit} className="feedback-form">
                             <Form.Group controlId="formName">
                                 <Form.Control

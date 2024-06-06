@@ -4,8 +4,10 @@ import { NavLink } from 'react-router-dom';
 import '../styles/Header.css';
 
 const Header = () => {
+  const isDisabled = true; // Set this conditionally based on your requirements
+
   return (
-    <header className='fixed-top'>
+    <header>
       <div className="header-section-1">
         <Navbar.Brand href="/" className="nav-brand text-dark text-center text-capitalize">Welcome to WorldTutorPro.com</Navbar.Brand>
       </div>
@@ -28,13 +30,13 @@ const Header = () => {
               <NavLink to="/students-list" className="nav-link" activeClassName="active-nav-link">
                 Students List
               </NavLink>
-              <NavLink to="/free-classes" className="nav-link" activeClassName="active-nav-link">
+              <NavLink to="/free-classes" className={`nav-link ${isDisabled ? 'disabled-link' : ''}`} activeClassName="active-nav-link">
                 Free Classes
               </NavLink>
-              <NavLink to="/ask-answer" className="nav-link" activeClassName="active-nav-link">
+              <NavLink to="/ask-answer" className={`nav-link ${isDisabled ? 'disabled-link' : ''}`} activeClassName="active-nav-link">
                 Ask & Answer
               </NavLink>
-              <NavLink to="/blogs" className="nav-link" activeClassName="active-nav-link">
+              <NavLink to="/blogs" className={`nav-link ${isDisabled ? 'disabled-link' : ''}`} activeClassName="active-nav-link">
                 Blogs
               </NavLink>
               <NavLink to="/feedback" className="nav-link" activeClassName="active-nav-link">
@@ -43,7 +45,7 @@ const Header = () => {
               <NavLink to="/donate-us" className="nav-link" activeClassName="active-nav-link">
                 Donate Us
               </NavLink>
-              <NavLink to="/login" className="nav-link" activeClassName="active-nav-link">
+              <NavLink to="/login" className={`nav-link ${isDisabled ? 'disabled-link' : ''}`} activeClassName="active-nav-link">
                 Login
               </NavLink>
             </Nav>

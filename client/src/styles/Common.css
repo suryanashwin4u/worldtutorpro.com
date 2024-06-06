@@ -4,3 +4,11 @@
     align-items: center;
     height: 100vh;
   }
+
+  .background-image {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This makes the background image fixed */
+  }

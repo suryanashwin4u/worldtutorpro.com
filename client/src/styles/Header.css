@@ -17,7 +17,6 @@ header {
   overflow-x: auto;
   white-space: nowrap;
   border-top-style: dashed;
-  border-bottom-style: dashed;
 }
 
 .navbar-orange {
@@ -54,4 +53,12 @@ header {
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
   color: white;
   background-color: black;
+}
+
+.disabled-link {
+  pointer-events: none;
+  cursor: not-allowed;
+  text-decoration: none;
+  color: black;
+  opacity: 0.5;
 }
