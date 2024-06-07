@@ -43,7 +43,13 @@ const tutorRegistration = async (req, res) => {
   }
 };
 
+//function to get all tutors
+const getAllTutors = (req, res) => {
+  res.json({ message: 'List of all tutors' });
+};
+
 module.exports = {
   upload,
   tutorRegistration,
+  getAllTutors
 };
