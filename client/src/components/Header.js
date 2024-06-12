@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import '../styles/Header.css';
 
 const Header = () => {
-  const isDisabled = true; // Set this conditionally based on your requirements
+  const isDisabled = false; // Set this conditionally based on your requirements
 
   return (
     <header>
@@ -18,17 +18,11 @@ const Header = () => {
               <NavLink to="/" exact className="nav-link" activeClassName="active-nav-link">
                 Home
               </NavLink>
-              <NavLink to="/tutor-registration" className="nav-link" activeClassName="active-nav-link">
-                Tutors Registration Form
+              <NavLink to="/tutor-student-registration" className="nav-link" activeClassName="active-nav-link">
+                Tutor / Student Registration
               </NavLink>
-              <NavLink to="/student-registration" className="nav-link" activeClassName="active-nav-link">
-                Students Registration Form
-              </NavLink>
-              <NavLink to="/tutors-list" className="nav-link" activeClassName="active-nav-link">
-                Tutors List
-              </NavLink>
-              <NavLink to="/students-list" className="nav-link" activeClassName="active-nav-link">
-                Students List
+              <NavLink to="/tutors-students-list" className="nav-link" activeClassName="active-nav-link">
+                Tutors / Students List
               </NavLink>
               <NavLink to="/free-classes" className={`nav-link ${isDisabled ? 'disabled-link' : ''}`} activeClassName="active-nav-link">
                 Free Classes
@@ -45,8 +39,8 @@ const Header = () => {
               <NavLink to="/donate-us" className="nav-link" activeClassName="active-nav-link">
                 Donate Us
               </NavLink>
-              <NavLink to="/login" className={`nav-link ${isDisabled ? 'disabled-link' : ''}`} activeClassName="active-nav-link">
-                Login
+              <NavLink to="/login-register" className={`nav-link ${isDisabled ? 'disabled-link' : ''}`} activeClassName="active-nav-link">
+                Login / Register
               </NavLink>
             </Nav>
           </Container>

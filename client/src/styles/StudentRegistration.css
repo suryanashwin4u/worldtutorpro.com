@@ -4,3 +4,6 @@
     height: auto; /* This maintains aspect ratio */
   }
 
+  .student-registration-form{
+    margin: auto;
+  }

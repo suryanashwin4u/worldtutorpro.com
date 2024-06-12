@@ -7,14 +7,11 @@ import '../styles/StudentRegistration.css';
 
 const StudentRegistration = () => {
   return (
-    <div className=" proper-alignment">
-      <Container className="mt-5 mb-5">
+    <div className="proper-alignment">
+      <Container>
         <Row>
-          <Col md={6} className="d-flex justify-content-center align-items-center">
-            {/* <Image src={studentIcon} alt="Student" className="student-icon" /> */}
-          </Col>
-          <Col md={6}>
-            <h2 className="mb-4 text-center text-capitalize text-white">Students Registration Form</h2>
+          <Col md={6} className='student-registration-form'>
+            <h2 className="mb-4 text-center text-capitalize text-white">Student Registration Form</h2>
             <StudentRegistrationForm />
           </Col>
         </Row>

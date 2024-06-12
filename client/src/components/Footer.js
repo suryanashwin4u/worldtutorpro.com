@@ -1,10 +1,10 @@
 // src/Footer.js
 import React from 'react';
-import facebookIcon from '../images/facebook-icon.svg'; // Assuming you have a Facebook icon image
-import gmailIcon from '../images/gmail-icon.svg';
-import linkedinIcon from '../images/linkedin-icon.svg'; // Assuming you have a LinkedIn icon image
-import phoneIcon from '../images/phone-icon.svg';
-import whatsappIcon from '../images/whatsapp-icon.svg';
+import facebookIcon from '../images/contact-icons/facebook-icon.svg'; // Assuming you have a Facebook icon image
+import gmailIcon from '../images/contact-icons/gmail-icon.svg';
+import linkedinIcon from '../images/contact-icons/linkedin-icon.svg'; // Assuming you have a LinkedIn icon image
+import phoneIcon from '../images/contact-icons/phone-icon.svg';
+import whatsappIcon from '../images/contact-icons/whatsapp-icon.svg';
 import '../styles/Footer.css';
 
 const Footer = () => {

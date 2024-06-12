@@ -1,0 +1,38 @@
+/* src/styles/TutorStudentList.css */
+.list-page {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+  }
+  
+  .toggle-btn {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    margin: 5px;
+    color: #007bff;
+    background-color: white;
+    border: 2px solid #007bff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .toggle-btn.active {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+    transform: scale(1.05);
+  }
+  
+  .toggle-btn:hover {
+    background-color: #0056b3;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  }
+  
+  .toggle-btn:not(.active):hover {
+    background-color: #e7f1ff;
+  }
+  
